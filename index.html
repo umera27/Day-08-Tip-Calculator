@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                   
+                     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Umera Masresha">
+    <link rel="stylesheet" type="text/css" href="./design/style.css">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+        <title>Frontend Mentor | Tip Calculator App</title>
+</head>
+<body>
+    <div class="container" >
+     <h1>Spil<span class="spillter">tter</span></h1>
+        <div class="card-body" id="container">
+            <div class="tipInput">
+               <label>Bill</label> 
+               <br>
+               <input type="number" placeholder="$"  id="bill" class="input">
+               <p>Select Tip %</p>
+               <ul>
+              <li id="1" onclick="val(5)">5%</li> 
+                <li id="2" onclick="val(10)">10%</li>
+                <li id="3" onclick="val(15)">15%</li>
+              <li id="4" onclick="val(25)">25%</li>
+                <li id="5" onclick="val(50)">50%</li>
+                
+                <li id="custom"><input type="text"   oninput="val(this.value)" placeholder="Custom"></li>
+               </ul>
+               <label>Number of People</label>
+               <span class="error" id="error">Can't be Zero</span>                    
+               <input type="text" class="input" name="Npeople" id="people">
+            </div>
+            <div class="tipOutput">
+                <h2>Tip Amount</h2>
+                <span class="right" id="tip">$0.00</span>
+                <span class="left">/ person</span>
+                
+                <h2>Total</h2>
+                <span class="right" id="peoT">$0.00</span>
+                <span class="left">/ person</span>
+                <br>
+             
+                <button type="button" class="btn-block" id="btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    
+  
+    <script src="tipCalculater.js"></script>
+</body>
+</html>
